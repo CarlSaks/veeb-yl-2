@@ -1,0 +1,242 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Gentium+Basic&family=Open+Sans:wght@300&display=swap');*/
+
+body {
+    position: relative;
+    min-height: calc(100vh - 17px);
+    margin: 10px 7px 7px;
+}
+
+header {
+    border: 1px solid gray;
+    border-bottom: 1px solid #FFF;
+}
+
+main {
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding-bottom: 181px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+img {
+    max-width: 100%;
+}
+
+header section {
+    display: table;
+    width: 100%;
+}
+
+header .logo {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0;
+}
+
+header .logo h1 {
+    font-family: monospace;
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+header .logo h4 {
+    font-family: monospace;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+hr {
+    width: 60%;
+    border-width: 3px;
+    margin: auto;
+}
+
+header nav {
+    margin: 10px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #000;
+    font-weight: 300;
+}
+
+main .banner {
+    background-image: url(img/banner.jpg);
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+main .valikud {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+main .valikud > a, main .valik {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+main .valik {
+    position: relative;
+}
+
+main .valiku-pilt {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+}
+
+main .valikud > a {
+    box-shadow: black 2px 2px 8px;
+}
+
+main .valikud > a:hover .valiku-pilt {
+    filter: blur(5px) brightness(70%);
+}
+
+main .valiku-pealkiri {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    color: #FFF;
+    font-family: monospace;
+    font-size: 2rem;
+    font-weight: 400;
+    width: max-content;
+}
+
+main #eesti {
+    background-image: url(img/eesti_toit.jpg);
+}
+
+main #aasia {
+    background-image: url(img/aasia_toit.jpeg);
+}
+
+main #itaalia {
+    background-image: url(img/itaalia_toit.jpg);
+}
+
+main .meist, main .retseptid {
+    margin: 20px;
+}
+
+main .meist h2, main .retseptid h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+main .meist p {
+    font-family: monospace;
+    font-size: 1.7rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .kontakt, footer .meedia {
+    margin: 10px;
+}
+
+footer .kontakt ul, footer .meedia ul {
+    list-style: none;
+}
+
+footer .kontakt li {
+    margin: 3px;
+}
+
+footer .kontakt a {
+    text-decoration: none;
+    color: initial;
+}
+
+header .logo *, footer .meedia li {
+    margin: 5px;
+}
+
+@media only screen and (max-width: 950px) {
+
+    main .meist img {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 951px) {
+
+    hr {
+        display: none;
+    }
+
+    main .banner {
+        height: 300px;
+        width: calc(100% - 150px);
+        margin: 0 50px;
+    }
+
+    main .meist, main .retseptid {
+        margin: 30px 100px;
+    }
+
+    main .meist > div {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    main .meist div > * {
+        width: 50%;
+        margin: 30px;
+    }
+
+    main .meist img {
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    main .retseptid .valikud {
+        justify-content: space-evenly;
+    }
+
+    footer .kontakt, footer .meedia {
+        margin: 30px;
+    }
+
+    footer .kontakt {
+        font-size: 1.3rem;
+    }
+
+    footer .meedia img {
+        width: 50px;
+    }
+}
